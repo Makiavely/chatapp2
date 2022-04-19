@@ -11,8 +11,10 @@
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <!--                    <Welcome />-->
 <!--                    Container-->
-                    <message-container />
-                    <input-message :room="currentRoom" />
+                    <message-container :messages="messages" />
+                    <input-message
+                        :room="currentRoom"
+                        v-on:messagesent="getMessages()" />
                 </div>
             </div>
         </div>
